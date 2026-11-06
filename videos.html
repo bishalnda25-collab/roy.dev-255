@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Videos - My Website</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('24.jpg') center/cover no-repeat fixed;
+  color: #fff;
+}
+
+    .videos-section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 20px;
+      color: #fff;
+    }
+
+    .videos-section h1 {
+      text-align: center;
+      color: #e50914;
+      margin-bottom: 30px;
+    }
+
+    /* Search bar */
+    .search-bar {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .search-bar input {
+      width: 60%;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+    }
+
+    .search-bar button {
+      padding: 10px 20px;
+      margin-left: 10px;
+      background-color: #e50914;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .search-bar button:hover {
+      background-color: #f40612;
+    }
+
+    /* Video grid */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+    }
+
+    .video-card {
+      background: rgba(0,0,0,0.8);
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+      transition: transform 0.3s ease;
+    }
+
+    .video-card:hover {
+      transform: scale(1.05);
+    }
+
+    iframe {
+      width: 100%;
+      height: 180px;
+      border-radius: 8px;
+      border: none;
+    }
+
+    .video-title {
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo-container">
+      <img src="logo.jpg" alt="Website Logo" class="logo">
+      <span class="site-name">Roy.dev</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="game.html">Game</a>
+      <a href="videos.html">Videos</a>
+      <a href="about.html">About</a>
+      <a href="login.html" class="btn">Login</a>
+      <a href="signup.html" class="btn">Sign Up</a>
+    </div>
+  </nav>
+
+  <!-- Videos Section -->
+  <div class="videos-section">
+    <h1>Our Videos</h1>
+
+    <!-- Search bar -->
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search for a video...">
+      <button onclick="searchVideo()">Search</button>
+    </div>
+
+    <!-- Video grid -->
+    <div class="video-grid" id="videoGrid">
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+        <div class="video-title">Video 1 Title</div>
+      </div>
+
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/9bZkp7q19f0" allowfullscreen></iframe>
+        <div class="video-title">Video 2 Title</div>
+      </div>
+
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/3JZ_D3ELwOQ" allowfullscreen></iframe>
+        <div class="video-title">Video 3 Title</div>
+      </div>
+
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/L_jWHffIx5E" allowfullscreen></iframe>
+        <div class="video-title">Video 4 Title</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function searchVideo() {
+      const query = document.getElementById("searchInput").value;
+      if(query.trim() !== "") {
+        // Replace spaces with + for YouTube search
+        const searchUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`;
+        // Open search results inside the site using iframe
+        document.getElementById("videoGrid").innerHTML = `
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed?listType=search&list=${encodeURIComponent(query)}" allowfullscreen></iframe>
+            <div class="video-title">Search Results for "${query}"</div>
+          </div>
+        `;
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
