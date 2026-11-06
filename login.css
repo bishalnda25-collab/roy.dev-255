@@ -1,0 +1,111 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("66.jpg") no-repeat center center/cover;
+  overflow: hidden;
+  animation: fadeBg 5s ease-in-out infinite alternate;
+}
+
+/* Container animation */
+.container {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(0,0,0,0.7);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  animation: slideUp 1s ease forwards, glowPulse 3s infinite;
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+/* Title animation */
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Input fields */
+.input-group input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-group input:focus {
+  border: 1px solid #667eea;
+  box-shadow: 0 0 12px rgba(102,126,234,0.9);
+  transform: scale(1.05);
+}
+
+/* Button animation */
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: #667eea;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  animation: bounceBtn 2s infinite;
+}
+
+.btn:hover {
+  background: #764ba2;
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Signup text */
+.signup-text {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ddd;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.signup-text a {
+  color: #667eea;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.signup-text a:hover {
+  color: #764ba2;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from { transform: translateY(100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 10px rgba(102,126,234,0.6); }
+  50% { box-shadow: 0 0 25px rgba(102,126,234,1); }
+  100% { box-shadow: 0 0 10px rgba(102,126,234,0.6); }
+}
+
+@keyframes bounceBtn {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes fadeBg {
+  from { filter: brightness(0.8); }
+  to { filter: brightness(1.1); }
+}

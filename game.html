@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Last Visit - Game</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Game-specific styles */
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('22.jpg') center/cover no-repeat fixed;
+  color: #fff;
+}
+
+    .main {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+      background: rgba(0,0,0,0.7);
+      border-radius: 12px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .main h1 {
+      color: #e50914;
+      margin-bottom: 20px;
+    }
+
+    .main p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .main img {
+      width: 200px;
+      margin: 10px;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .main img:hover {
+      transform: scale(1.1);
+    }
+
+    .price {
+      font-size: 22px;
+      font-weight: bold;
+      margin: 20px 0;
+      color: #ffd700;
+    }
+
+    .buy-btn {
+      background-color: #e50914;
+      color: #fff;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .buy-btn:hover {
+      background-color: #f40612;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo-container">
+      <img src="logo.jpg" alt="Website Logo" class="logo">
+      <span class="site-name">Roy.dev</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="game.html">Game</a>
+      <a href="videos.html">Videos</a>
+      <a href="about.html">About</a>
+      <a href="login.html" class="btn">Login</a>
+      <a href="signup.html" class="btn">Sign Up</a>
+    </div>
+  </nav>
+
+  <!-- Game Content -->
+  <div class="main">
+    <h1>The Last Visit</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sit libero saepe blanditiis unde earum vitae recusandae praesentium voluptates eveniet. Facere eveniet, quo impedit cum magnam consequatur labore corrupti officia sapiente repellat accusamus dignissimos corporis laboriosam nulla odit asperiores fugit a veniam rem molestias.
+    </p>
+
+    <h1>Screenshots</h1>
+    <img src="11.jpg" alt="Screenshot 1">
+    <img src="12.jpg" alt="Screenshot 2">
+    <img src="13.jpg" alt="Screenshot 3">
+    <img src="14.jpg" alt="Screenshot 4">
+
+    <p class="price">Buy this game for just $15</p>
+    <button class="buy-btn">Buy This Game</button>
+  </div>
+</body>
+</html>

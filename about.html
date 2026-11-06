@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About - My Website</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* About Page Specific Styles */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('25.jpg') center/cover no-repeat fixed;
+  color: #fff;
+}
+
+
+
+    .about-section {
+      max-width: 900px;
+      margin: 60px auto;
+      background: rgba(0,0,0,0.8);
+      padding: 40px;
+      border-radius: 12px;
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .about-section h1 {
+      color: #e50914;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .about-section p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .social-links {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .social-links a {
+      display: inline-block;
+      margin: 0 15px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #e50914;
+      transform: scale(1.1);
+    }
+
+    .comment-box {
+      margin-top: 40px;
+    }
+
+    .comment-box h2 {
+      color: #ffd700;
+      margin-bottom: 15px;
+    }
+
+    .comment-box input, .comment-box textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 6px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .comment-box input:focus, .comment-box textarea:focus {
+      border: 1px solid #e50914;
+      box-shadow: 0 0 10px rgba(229,9,20,0.7);
+      transform: scale(1.02);
+    }
+
+    .comment-box button {
+      background-color: #e50914;
+      color: #fff;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .comment-box button:hover {
+      background-color: #f40612;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo-container">
+      <img src="logo.jpg" alt="Website Logo" class="logo">
+      <span class="site-name">Roy.dev</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="game.html">Game</a>
+      <a href="videos.html">Videos</a>
+      <a href="about.html">About</a>
+      <a href="login.html" class="btn">Login</a>
+      <a href="signup.html" class="btn">Sign Up</a>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <div class="about-section">
+    <h1>About Us</h1>
+    <p>Welcome to the About page! This website was created to share games, videos, and creative projects in one place. 
+    Here you’ll find updates about our journey, our goals, and the inspiration behind the content we publish.</p>
+    
+    <p>We believe in learning by doing, experimenting with web development, and building fun interactive experiences. 
+    Whether you’re here to play, watch, or explore, we hope you enjoy your time on the site.</p>
+
+    <div class="social-links">
+      <h2>Connect with us:</h2>
+      <a href="https://www.youtube.com/@RoyDev-s5d" target="_blank">YouTube</a>
+      <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+      <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+    </div>
+
+    <div class="comment-box">
+      <h2>Leave a Comment</h2>
+      <form>
+        <input type="text" name="username" placeholder="Your Name" required>
+        <textarea name="comment" rows="5" placeholder="Your Comment..." required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

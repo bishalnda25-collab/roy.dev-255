@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo-container">
+      <img src="logo.jpg" alt="Website Logo" class="logo">
+      <span class="site-name">Roy.dev</span>
+    </div>
+    
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="game.html">Game</a>
+      <a href="videos.html">Videos</a>
+      <a href="about.html">About</a>
+      <a href="login.html" class="btn">Login</a>
+      <a href="signup.html" class="btn">Sign Up</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Welcome to My Website</h1>
+      <p>Stream games, videos, and more — all in one place.</p>
+      <a href="signup.html" class="cta-btn">Get Started</a>
+    </div>
+ <br>
+
+ <footer class="footer">
+  <div id="clock"></div>
+</footer>
+
+   
+<script>
+function updateClock() {
+  const now = new Date();
+
+  const options = {
+    weekday: 'long',   // Day name (e.g., Friday)
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  };
+
+  const dateString = now.toLocaleDateString('en-US', options);
+  const timeString = now.toLocaleTimeString('en-US', { hour12: false });
+
+  document.getElementById('clock').textContent = `${dateString} | ${timeString}`;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+
+
+  </header>
+</body>
+</html>
